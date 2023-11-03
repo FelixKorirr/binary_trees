@@ -19,14 +19,14 @@ bst_t *array_to_bst(int *array, size_t size)
 
 	for (x = 0; x < size; x++)
 	{
-		for (y = 0; y < i; y++)
+		for (y = 0; y < x; y++)
 		{
 			if (array[y] == array[x])
 				break;
 		}
 		if (y == x)
 		{
-			if (bst_insert(&tree, array[i]) == NULL)
+			if (bst_insert(&tree, array[x]) == NULL)
 			{
 				return (NULL);
 			}
