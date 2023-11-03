@@ -26,7 +26,7 @@ unsigned char is_a_leaf(const binary_tree_t *node)
  */
 size_t node_depth(const binary_tree_t *tree)
 {
-	return (tree->parent != NULL ? 1 + depth(tree->parent) : 0);
+	return (tree->parent != NULL ? 1 + node_depth(tree->parent) : 0);
 }
 
 /**
@@ -37,9 +37,9 @@ size_t node_depth(const binary_tree_t *tree)
  */
 const binary_tree_t *ret_leaf(const binary_tree_t *tree)
 {
-	if (is_leaf(tree) == 1)
+	if (is_a_leaf(tree) == 1)
 		return (tree);
-	return (tree->left ? get_leaf(tree->left) : get_leaf(tree->right));
+	return (tree->left ? ret_leaf(tree->left) : ret_leaf(tree->right));
 }
 
 /**
@@ -65,7 +65,7 @@ int perfectly_recursive(const binary_tree_t *tree,
 }
 
 /**
- * tree_is_perfect - Check if a binary tree is perfect.
+ * binary_tree_is_perfect - Check if a binary tree is perfect.
  * @tree: Pointer to the root node of the tree to check.
  * Return: If tree is NULL or not perfect, 0.else, 1.
  * korir codes
@@ -76,5 +76,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-	return (perfectly_recursive(tree, depth(ret_leaf(tree)), 0));
+	return (perfectly_recursive(tree, node_depth(ret_leaf(tree)), 0));
 }
