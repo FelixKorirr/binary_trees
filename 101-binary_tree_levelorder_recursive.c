@@ -1,10 +1,5 @@
 #include "binary_trees.h"
 
-nodet *append(nodet *head, const binary_tree_t *btnode);
-void free_list(nodet *head);
-nodet *get_children(nodet *head, const binary_tree_t *parent);
-void recursive_levels(nodet *head, void (*func)(int));
-
 /**
  * struct node_s - singly linked list
  * @node: const binary tree node
@@ -16,6 +11,11 @@ void recursive_levels(nodet *head, void (*func)(int));
          const binary_tree_t *node;
          struct node_s *next;
  } nodet;
+
+nodet *append(nodet *head, const binary_tree_t *btnode);
+void free_list(nodet *head);
+nodet *get_children(nodet *head, const binary_tree_t *parent);
+void recursive_levels(nodet *head, void (*func)(int));
 
 /**
  * binary_tree_levelorder - Goes through a binary tree
