@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * is_full_recursive - Check if a binary tree is recursive.
+ * is_recursive - Check if a binary tree is recursive.
  * @tree: Pointer to the root node of the tree to check.
  * Return: If tree is not full, 0.else, 1.
  * korir codes
@@ -25,7 +25,7 @@ int is_recursive(const binary_tree_t *tree)
  * Return: If tree is NULL or is not full - 0.else - 1.
  * korir codes
  */
-int tree_is_full(const binary_tree_t *tree)
+int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 	{
