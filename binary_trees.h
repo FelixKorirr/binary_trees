@@ -6,6 +6,18 @@
 #include <stdlib.h>
 #include <string.h>
 
+ /**
+ * struct node_s - singly linked list
+ * @node: const binary tree node
+ * @next: Points to the next node
+ * korir codes
+ */
+ typedef struct node_s
+ {
+         const binary_tree_t *node;
+         struct node_s *next;
+ } nodet;
+
 /**
  * struct binary_tree_s - Binary tree node
  * @n: Integer stored in the node

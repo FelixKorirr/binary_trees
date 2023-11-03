@@ -1,17 +1,5 @@
 #include "binary_trees.h"
 
-/**
- * struct node_s - singly linked list
- * @node: const binary tree node
- * @next: Points to the next node
- * korir codes
- */
-typedef struct node_s
-{
-	const binary_tree_t *node;
-	struct node_s *next;
-} nodet;
-
 nodet *append(nodet *head, const binary_tree_t *btnode);
 void free_list(nodet *head);
 nodet *get_children(nodet *head, const binary_tree_t *parent);
