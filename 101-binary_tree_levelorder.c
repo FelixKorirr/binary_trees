@@ -6,6 +6,18 @@ nodet *get_children(nodet *head, const binary_tree_t *parent);
 void recursive_levels(nodet *head, void (*func)(int));
 
 /**
+ * struct node_s - singly linked list
+ * @node: const binary tree node
+ * @next: Points to the next node
+ * korir codes
+ */
+ typedef struct node_s
+ {
+         const binary_tree_t *node;
+         struct node_s *next;
+ } nodet;
+
+/**
  * binary_tree_levelorder - Goes through a binary tree
  * using level-order traversal.
  * @tree: Pointer to the root node of the tree to traverse.
