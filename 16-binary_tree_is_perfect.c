@@ -5,7 +5,7 @@ size_t node_depth(const binary_tree_t *tree);
 const binary_tree_t *ret_leaf(const binary_tree_t *tree);
 int perfectly_recursive(const binary_tree_t *tree,
 		size_t leaf_depth, size_t level);
-int tree_is_perfect(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
 
 /**
  * is_a_leaf - Check if a node is the leaf of a binary tree.
@@ -70,7 +70,7 @@ int perfectly_recursive(const binary_tree_t *tree,
  * Return: If tree is NULL or not perfect, 0.else, 1.
  * korir codes
  */
-int tree_is_perfect(const binary_tree_t *tree)
+int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 	{
